@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# Secrets — NEVER commit these
+env.yaml
+*.secret
+*.key
+service-account*.json
+
+# GCP credentials
+application_default_credentials.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

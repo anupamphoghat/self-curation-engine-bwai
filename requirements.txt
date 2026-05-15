@@ -1,0 +1,22 @@
+# Self-Curation Engine — Python dependencies
+# Install: pip install -r requirements.txt
+
+# Web framework (Cloud Run)
+flask==3.0.3
+gunicorn==22.0.0
+
+# CloudEvents SDK — REQUIRED for correct Eventarc payload parsing
+# DO NOT replace with raw request.get_json() — the payload format differs.
+cloudevents==1.11.0
+
+# Google Cloud SDKs
+google-cloud-storage==2.17.0
+google-cloud-bigquery==3.25.0
+google-cloud-firestore==2.16.0
+google-cloud-aiplatform==1.60.0
+
+# HTTP client for Slack webhooks
+requests==2.32.3
+
+# Structured logging
+python-json-logger==2.0.7

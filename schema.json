@@ -1,0 +1,70 @@
+[
+  {
+    "name": "transaction_id",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Unique identifier from source system"
+  },
+  {
+    "name": "store_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Store name or location code"
+  },
+  {
+    "name": "total_amount",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Transaction value (tax-exclusive where applicable)"
+  },
+  {
+    "name": "currency_code",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "ISO 4217 currency code"
+  },
+  {
+    "name": "event_timestamp",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "Transaction or record creation timestamp"
+  },
+  {
+    "name": "_metadata",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "description": "AI pipeline audit trail — attached to every row",
+    "fields": [
+      {
+        "name": "source_file",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "GCS URI of the originating file"
+      },
+      {
+        "name": "mapping_confidence",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "description": "Gemini global_confidence score (0–1)"
+      },
+      {
+        "name": "model_version",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Gemini model used for this mapping"
+      },
+      {
+        "name": "from_cache",
+        "type": "BOOL",
+        "mode": "NULLABLE",
+        "description": "True if mapping was served from Firestore cache"
+      },
+      {
+        "name": "processed_at",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "Pipeline processing timestamp"
+      }
+    ]
+  }
+]
