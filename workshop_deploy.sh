@@ -23,9 +23,6 @@
 #   2. gcloud CLI authenticated:
 #        gcloud auth login
 #        gcloud config set project YOUR_PROJECT_ID
-#   3. This repo cloned:
-#        git clone https://github.com/YOUR_USERNAME/self-curation-engine.git
-#        cd "self-curation-engine GDG Brisbane"
 #   4. Slack Webhook URL + Signing Secret ready
 #      --> See WORKSHOP.md "Step 1: Set Up Slack" before running this script
 #
